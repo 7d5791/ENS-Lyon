@@ -1,0 +1,29 @@
+<routes xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://sumo.sf.net/xsd/routes_file.xsd">
+   <vType id="SUMO_DEFAULT_TYPE" accel="0.8" decel="4.5" sigma="0.5" length="5" minGap="2" maxSpeed="12"/>
+  
+   <vTypeDistribution id="urban">
+    <vType id="uSlowCar" accel="2.6" decel="4.5" sigma="0.5" length="5" minGap="2.5" maxSpeed="14" color="0,0,0" probability="0.05"/>
+	<vType id="uCar" accel="2.6" decel="4.5" sigma="0.5" length="4" minGap="2.5" maxSpeed="25" color="1,1,0" probability="0.69"/>
+	<vType id="uFastCar" accel="2.6" decel="4.5" sigma="0" length="4" minGap="3" maxSpeed="33" color="0,1,0" probability="0.01"/>
+	<vType id="uBus" accel="2.6" decel="4.5" sigma="0" length="12" minGap="3" maxSpeed="17" color="1,1,0" guiShape="bus" probability="0.25"/>
+</vTypeDistribution>
+
+
+<vTypeDistribution id="highway">
+    <vType id="hSlowCar" accel="2.6" decel="4.5" sigma="0.5" length="5" minGap="2.5" maxSpeed="25" color="0,0,1" probability="0.05"/>
+	<vType id="hCar" accel="2.6" decel="4.5" sigma="0.5" length="4" minGap="2.5" maxSpeed="70" color="1,1,0" probability="0.69"/>
+	<vType id="hFastCar" accel="2.6" decel="4.5" sigma="0" length="4" minGap="3" maxSpeed="39" color="0,1,0"  probability="0.01"/>
+	<vType id="hBus" accel="2.6" decel="4.5" sigma="0" length="12" minGap="3" maxSpeed="25" color="1,1,1" guiShape="bus" probability="0.15"/>
+	<vType id="hTruck" accel="2.6" decel="4.5" sigma="0" length="12" minGap="3" maxSpeed="25" color="1,1,0" guiShape="bus" probability="0.10"/>
+</vTypeDistribution>
+
+   <route id="always_right" edges="gneE3 gneE5 "/>
+   <flow id="always_right"  type="SUMO_DEFAULT_TYPE" route="always_right" begin="0" period="3" number="1"/>
+    
+     
+   <route id="always_left" edges="gneE6 gneE7"/>
+   <flow id="always_left"  type="SUMO_DEFAULT_TYPE" route="always_left" begin="0" period="3" number="0"/>
+ 
+ 
+    
+</routes>
